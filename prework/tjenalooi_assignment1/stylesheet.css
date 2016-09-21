@@ -1,0 +1,29 @@
+h1 {
+	color: rgb(0,100,255);
+}
+
+.profile-picture {
+	max-height: 400px;
+	float:left;
+	margin-right: 40px; 
+	border: 1px solid black;
+	border-radius: 40px;
+}
+
+li {
+	text-indent:1em; 
+	list-style-position: inside;
+	list-style-type: none;
+}
+
+.section {
+	margin-top: 45px;
+}
+
+a {
+	color:rgb(255,50,0);
+}
+
+a:hover {
+	color: rgb(150,20,0);
+}
