@@ -10,23 +10,30 @@ var functions = {
 			return false;
 		}
 	},
-	countTo: function (number) {
+	FizzBuzz: function (number) {
+		memory[0] = [];
+		memory[0].push('FizzBuzz result');
 		for (i = 1; i <= number; i++) {
 			if (functions.checkIfModuloZero(i,3) && functions.checkIfModuloZero(i,5)) {
-				console.log('FizzBuzz');
+				memory[0].push('FizzBuzz');
 			}
 			else if (functions.checkIfModuloZero(i,3)) {
-				console.log('Fizz');
+				memory[0].push('Fizz');
 			}
 			else if (functions.checkIfModuloZero(i,5)) {
-				console.log('Buzz');
+				memory[0].push('Buzz');
 			}
 			else {
-				console.log(i);
+				memory[0].push(i);
 			}
-			// console.log(functions.countTo());
 		}
+		return 'completed';
 	} 
 }
 
-functions.countTo(100);
+var memory = {
+	0: [],
+}
+
+functions.FizzBuzz(100);
+console.log(memory[0]);
