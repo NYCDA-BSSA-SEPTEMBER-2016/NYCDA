@@ -13,6 +13,13 @@
 
 function totalPhonePurchases (bank, phonePrice, accessPrice, taxRate, accessLimit) {
 // buy phones & accessories until out of money.	
+	taxRate = taxRate || 0.21;
+	if (taxRate > 1) {
+		taxRate /= 100;
+	}
+	accessLimit = accessLimit || Infinity;
+	phonePrice *= taxRate + 1;
+	accessPrice *= taxRate + 1;
 	var receipt = {
 		phones: 0,
 		accessories: 0,
@@ -22,15 +29,18 @@ function totalPhonePurchases (bank, phonePrice, accessPrice, taxRate, accessLimi
 	while (receipt.totalPrice + phonePrice <= bank) {
 		receipt.totalPrice += phonePrice;
 		receipt.phones += 1;
-		if (receipt.totalPrice + accessPrice <= bank) {
+		if (receipt.totalPrice + accessPrice <= bank && accessPrice <= accessLimit) {
 			receipt.totalPrice += accessPrice;
 			receipt.accessories += 1;
 		}
 	}
+	receipt.taxesPaid = receipt.totalPrice - receipt.totalPrice / (taxRate + 1);
+	receipt.taxesPaid = '$' + receipt.taxesPaid.toFixed(2);
+	receipt.totalPrice = '$' + receipt.totalPrice.toFixed(2);
 	return receipt;
 }
 
-totalPhonePurchases(1000,200,100,20);
+totalPhonePurchases(1000,200,100,0.20);
 
 // bank account
 // phone price
