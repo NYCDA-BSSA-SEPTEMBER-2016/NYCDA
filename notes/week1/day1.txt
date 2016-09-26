@@ -1,0 +1,13 @@
+Week 1, Day 1
+
+semicolons are optional? //YES, 1 small case of issue.
+Do while loop need their counter defined globally // Yes seems that way.
+soft quotes ("") vs hard quotes ('') // depends on the language, doesn't matter in JS.
+
+Things I struggle with:
++ !== and !true.
++ loops with subtracting counters
+
+For day 2:
++ Mention NaN, part of data types.
++ Also exponential and optionally unary.
