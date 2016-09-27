@@ -7,6 +7,14 @@
 // global memory object
 var memory = {
 	0: [],
+	1: [],
+	read: function (target) {
+		if (target === 0 || target == true) {
+			console.log(memory[target]);
+		} else {
+			console.log(memory);
+		}
+	}
 }
 
 // global function object
@@ -18,7 +26,7 @@ var functions = {
 			return false;
 		}
 	},
-	FizzBuzz: function (number) {
+	fizzBuzz: function (number) {
 		// memory slot
 		memory[0] = [];
 		memory[0].push('FizzBuzz result');
@@ -41,5 +49,5 @@ var functions = {
 }
 
 //executables
-functions.FizzBuzz(100);
-console.log(memory[0]);
+functions.fizzBuzz(100);
+memory.read(0);

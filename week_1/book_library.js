@@ -35,11 +35,12 @@ var book3 = {
 	body: ['Written by David Foster Wallace', 'Hal Incandenza is the youngest of the Incandenza children',
 	'As a child, he was very precocious.']
 }
+// global functions object
 var functions = {
 	readBookToConsole: function (book) {
 		console.log(book.title);
 		for (var page in book.body) {
-			console.log('page ' + (page + 1) + ': ' + book.body[page]);
+			console.log('page ' + (parseInt(page) + 1) + ': ' + book.body[page]);
 		}
 	},
 	readBookToConsoleAlt: function (book) {
@@ -59,13 +60,42 @@ var functions = {
 		for (value in target) {
 			target[value] = new functions.Book(target[value]);
 		}
+	},
+	setPrototypes: function () {
+		for (prop in prototypes) {
+			console.log(prop);
+		}
 	}
 }
-var gamesThatShouldBeBooks = [999, 'Phoenix Wright', 'Final Fantasy', 'Bioshock'];
-functions.bookify(gamesThatShouldBeBooks);
 
-for (book in gamesThatShouldBeBooks) {
-	functions.addBookContent(gamesThatShouldBeBooks[book],'body','It all begins with...');
+// global prototypes object
+var prototypes = {
+	Book: function () {
+		functions.Book.prototype.read = function () {
+			console.log(this.title);
+			for (var i = 0; i < this.body.length; i++) {
+				console.log('page ' + (i + 1) + ': ' + this.body[i]);
+			}
+		}
+	}
+	// fix this, doesn't work like it should.
 }
 
+var gamesThatShouldBeBooks = [999, 'Phoenix Wright'
+, 'Final Fantasy', 'Bioshock'];
+functions.bookify(gamesThatShouldBeBooks);
+// what happens if I array.join this?
+
+for (book in gamesThatShouldBeBooks) {
+	functions.addBookContent(gamesThatShouldBeBooks[book],'body',['It all begins with...']);
+}
+
+//executables
 functions.readBookToConsoleAlt(book3);
+functions.setPrototypes();
+
+// TO DO
+// make bookify and for loop work with non-array datatypes e.g. strings
+// Change Final Fantasy to Array, get bookify to still work
+// Figure out readBookToConsole.
+// Prototypes

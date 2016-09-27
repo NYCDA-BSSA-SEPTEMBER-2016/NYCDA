@@ -1,6 +1,24 @@
+Week 1, Day 2
+
+ssh and ssl use private and public keys
+
+metaphor:
+public keys are like a lock, you can put on anything.
+private keys are like a key, that you can use on your lock.
+
+remember the eval "$(ssh-agent -s)" to start ssh-agent.
+add key if needed: ssh-add ~/.ssh/id_rsa
 
 
+Questions:
+Why can't I say times++? //wrong synthax?
+Prototypes
+Array.map
+Array.reduce
+Array.find()
+Array.indexOf()
+Why is it called key-value pairs?// can't find specific metaphor 
+recursive function to log all depth of objects in the object.
+dot notation for objects does not work in for-loops. Why? //dot notation is easier to read and generally preffered. Bracket notation always fricking works en never breaks. If dot notation breaks it will give a typeError.
 
-
-Notes to self:
-+ Mention NaN
+Arrays apparently have forEach() built in. Come back to it later.
