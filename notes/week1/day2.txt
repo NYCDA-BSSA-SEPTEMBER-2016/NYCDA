@@ -8,17 +8,23 @@ private keys are like a key, that you can use on your lock.
 
 remember the eval "$(ssh-agent -s)" to start ssh-agent.
 add key if needed: ssh-add ~/.ssh/id_rsa
-
+alias key is set now. Is under some kind of terminal profile.
 
 Questions:
 Why can't I say times++? //wrong synthax?
-Prototypes
+Prototypes // sorta got it
 Array.map
 Array.reduce
 Array.find()
 Array.indexOf()
+Array.join // returns all array content as a string, even nested into further levels.
 Why is it called key-value pairs?// can't find specific metaphor 
-recursive function to log all depth of objects in the object.
 dot notation for objects does not work in for-loops. Why? //dot notation is easier to read and generally preffered. Bracket notation always fricking works en never breaks. If dot notation breaks it will give a typeError.
 
-Arrays apparently have forEach() built in. Come back to it later.
+// Arrays apparently have forEach() built in. Come back to it later.
+
+How do virusses spread?
+
+How to create functions that run with large and unknown data?
+
+Can I make a recursive function to log all depth of objects in the object?

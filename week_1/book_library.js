@@ -1,52 +1,15 @@
-// Book library
-
-// Create an object that represents a book:
-
-// Part 1 Give it a title property with a value that is the title of your book.
-// Give it a body� property which has an array of strings as the value. 
-// There should be at least three strings within the array. This array represents the pages of text within your book.
-
-// Part 2 Create another object with the same format, but different title and different body.
-
-// Part 3 Now, create a function that reads the book by first printing out the title, 
-// then printing out each element (page) in the body. For a book with title "Infinite Jest" and pages 
-// "Written by David Foster Wallace", "Hal Incandenza is the youngest of the Incandenza children.", 
-// and "As a child, he was very precocious.", the output should read as follows:
-
-// Title: Infinite Jest
-// Page 1: Written by David Foster Wallace
-// Page 2: Hal Incandenza is the youngest of the Incandenza children.
-// Page 3: As a child, he was very precocious.
-
-var book1 = {
-	title: 'The Adventures of The Coding Wizard',
-	body: ['Cold dark room, bright glowing screen.', 'The air was tense, filled with sweat and fatigue.', 
-	'It was late, or early, who could still tell.']
-};
-
-var book2 = {
-	title: 'The Adventures of The Coding Mage',
-	body: ['Cold dark room, bright glowing screen.', 'The air was tense, filled with sweat and fatigue.', 
-	'The mage felt excited, it was time for the final showdown: him vs The Wizard.']
-};
-
-var book3 = {
-	title: 'Infinite Jest',
-	body: ['Written by David Foster Wallace', 'Hal Incandenza is the youngest of the Incandenza children',
-	'As a child, he was very precocious.']
-}
-// global functions object
+// =GLOBAL FUNCTIONS OBJECT
 var functions = {
 	readBookToConsole: function (book) {
-		console.log(book.title);
+		console.log('Title: ' + book.title);
 		for (var page in book.body) {
-			console.log('page ' + (parseInt(page) + 1) + ': ' + book.body[page]);
+			console.log('Page ' + (parseInt(page) + 1) + ': ' + book.body[page]);
 		}
 	},
 	readBookToConsoleAlt: function (book) {
-		console.log(book.title);
+		console.log('Title: ' + book.title);
 		for (var i = 0; i < book.body.length; i++) {
-			console.log('page ' + (i + 1) + ': ' + book.body[i]);
+			console.log('Page ' + [i + 1] + ': ' + book.body[i]);
 		}
 	},
 	Book: function (title, body) {
@@ -57,45 +20,59 @@ var functions = {
 		book[prop] = value;
 	},
 	bookify: function (target) {
-		for (value in target) {
+		for (var value in target) {
 			target[value] = new functions.Book(target[value]);
 		}
 	},
-	setPrototypes: function () {
-		for (prop in prototypes) {
-			console.log(prop);
+	addBookContentLoop: function (bookArray, prop, value) {
+		for (var book in bookArray) {
+			functions.addBookContent(bookArray[book],'body',['It all begins with...']);
+		}
+		// TO DO: merge with normal addBookContent. Instead of 2 functions for 2 datatypes. HOW??? Probably if statement. Or code that works either way (is that possible?).
+		// TO DO: build read function that takes an array.
+	},
+	setAllPrototypes: function (prototypes) {
+		for (var prop in prototypes) {
+			prototypes[prop]();	
 		}
 	}
-}
+};
 
-// global prototypes object
+// =GLOBAL PROTOTYPES OBJECT
 var prototypes = {
 	Book: function () {
 		functions.Book.prototype.read = function () {
-			console.log(this.title);
+			console.log('Title: ' + this.title);
 			for (var i = 0; i < this.body.length; i++) {
-				console.log('page ' + (i + 1) + ': ' + this.body[i]);
+				console.log('Page ' + (i + 1) + ': ' + this.body[i]);
 			}
-		}
+		};
 	}
-	// fix this, doesn't work like it should.
-}
+};
 
-var gamesThatShouldBeBooks = [999, 'Phoenix Wright'
-, 'Final Fantasy', 'Bioshock'];
+// =GLOBAL VARIABLE DECLARATIONS
+var book1 = new functions.Book('The Adventures of The Coding Wizard',['Cold dark room, bright glowing screen.', 'The air was tense, filled with sweat and fatigue.', 
+	'It was late, or early, who could still tell.'])
+
+var book2 = new functions.Book('The Adventures of The Coding Mage',['Cold dark room, bright glowing screen.', 'The air was tense, filled with sweat and fatigue.', 
+	'The mage felt excited, it was time for the final showdown: him vs The Wizard.'])
+
+var book3 = new functions.Book('Infinite Jest',['Written by David Foster Wallace', 'Hal Incandenza is the youngest of the Incandenza children',
+	'As a child, he was very precocious.'])
+
+var gamesThatShouldBeBooks = [999, 'Phoenix Wright', 'Final Fantasy', 'Bioshock'];
+
+// =GLOBAL DATA MANIPULATIONS
 functions.bookify(gamesThatShouldBeBooks);
-// what happens if I array.join this?
+functions.addBookContentLoop(gamesThatShouldBeBooks);
+functions.setAllPrototypes(prototypes);
 
-for (book in gamesThatShouldBeBooks) {
-	functions.addBookContent(gamesThatShouldBeBooks[book],'body',['It all begins with...']);
-}
-
-//executables
-functions.readBookToConsoleAlt(book3);
-functions.setPrototypes();
+// =EXECUTABLES
+functions.readBookToConsole(book1);
+functions.readBookToConsoleAlt(book2);
+book3.read();
+console.log(gamesThatShouldBeBooks);
 
 // TO DO
 // make bookify and for loop work with non-array datatypes e.g. strings
 // Change Final Fantasy to Array, get bookify to still work
-// Figure out readBookToConsole.
-// Prototypes

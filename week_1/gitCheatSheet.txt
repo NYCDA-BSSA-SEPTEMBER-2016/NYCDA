@@ -1,0 +1,23 @@
+// GIT CHEATSHEET
+git status = show current status. Use this a lot & whenever in doubt, it also generally shows what to do to fix errors.
+
+git init = mark current directory as git repo. Not neccesairy when cloning. 
+
+git commit -am = commit changes. -a automatically removes files from the staging area that were deleted from the directory. -m allows to immediate type in a message between "", rather than go into vim.
+
+git reset = unstage a file.
+
+git checkout -- <target> = target goes back to stage before last commit to it. 
+
+git merge <branch> = merges <branch> into current branch. Be in the master in order to merge (/pull into) to master. 
+git merge -d <branch> = removes <branch>. Only works from branches that have been merged. If unmerged, use -D.
+
+git pull <target> <branch> = pulls files from target branch. E.g. git pull origin master.
+
+git clone <link> = Use SSH for own projects. Https for other. Copy the clone link into the <link> 
+
+WHEN MERGE CONFLICT
++ Stay calm
+	1. decide to not merge OR
+	2. resolve the conflict, see what git marked for you.
+In depth link: https://git-scm.com/docs/git-merge#_how_conflicts_are_presented
