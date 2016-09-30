@@ -1,0 +1,23 @@
+Week 1, day 4
+
+does .call() work instead of new?
+Does new create an object? And the constructor fill it in?
+Does new only work for Constructors?
+New keyword to create a object from a function. We don't have classes. We have prototypes instead.
+Class extension through changing the prototype.
+Call functions like an object with the new keyword.
+
+You could see a prototype as a template...
+
+THIS is set on instance.
+
+I need to play Factorio, understand the blueprints. Classes/prototype.
+
+function Human (a,b) {
+	this.legs = a;
+	this.eyes = b;
+}
+
+
+var a = Human(2,4);
+console.log(a);
