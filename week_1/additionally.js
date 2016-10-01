@@ -29,6 +29,7 @@ function starString (length) {
 console.log(starString(4)); // ****
 console.log(starString(2)); // **
 
+// alternative approach
 function gijsManier (length) {
 	for (var result = '*'; result.length <= length; result += "*") {
 		if (result.length === length) {
@@ -38,8 +39,6 @@ function gijsManier (length) {
 }
 console.log(gijsManier(5)); //*****
 console.log(gijsManier(7)); //*******
-
-
 
 // Now, write a function that takes in one parameter "length" and prints out a square of stars. examples:
 function starSquare (length) {
@@ -56,12 +55,6 @@ function starSquare (length) {
 
 console.log(starSquare(2)); // ** **
 console.log(starSquare(4)); // **** **** **** ****
-
-// 3 --> *** *** ***
-
-// 5 --> ***** ***** ***** *****
-
-// *****
 
 // Given an array of integers, write a function that finds the average and returns it.
 function arrayAverage (intArray) {
