@@ -6,28 +6,31 @@ body {
 
 nav ul {
 	margin:0px;
-	background: #d1d2d3;
+	background: rgb(219, 220, 221);
+	text-align: center;
 }
 
 ul li {
 	display:inline-block;
-	padding:15px 5px;
+	padding:10px 5px;
 	color:#7f8082;
 }
 
-ul li::after {
+ul li:after {
 	padding: 0px 40px;
 	content: '|';
 	line-height: 100%;
 }
 
-ul li::last-child {
-	content: '';
+ul li:first-child:before {
+	content: '|';
+	padding-right: 40px;
 }
 
 a {
 	text-decoration: none;
 	color:inherit;
+	padding:2px;
 }
 
 a:hover {
