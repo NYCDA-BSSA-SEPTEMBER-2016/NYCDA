@@ -1,0 +1,62 @@
+body {
+	font-family: arial,sans-serif;
+	color:rgb(50,50,50);
+	margin:0px;
+}
+
+nav ul {
+	margin:0px;
+	background: #d1d2d3;
+}
+
+ul li {
+	display:inline-block;
+	padding:15px 5px;
+	color:#7f8082;
+}
+
+ul li::after {
+	padding: 0px 40px;
+	content: '|';
+	line-height: 100%;
+}
+
+ul li::last-child {
+	content: '';
+}
+
+a {
+	text-decoration: none;
+	color:inherit;
+}
+
+a:hover {
+	color:rgb(50,50,50);
+}
+
+.content-container {
+	max-width:1080px;
+	margin:0px auto;
+	text-align: center;
+}
+
+h1 {
+	margin-top:60px;
+	margin-bottom:70px;
+}
+
+img {
+	max-width: 100%;
+}
+
+.img-home {
+	max-width:800px;
+}
+
+.github-embed img {
+	margin:0px auto;
+}
+
+footer {
+	padding:40px;
+}
