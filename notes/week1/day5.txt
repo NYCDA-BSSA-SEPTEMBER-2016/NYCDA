@@ -1,0 +1,6 @@
+week 1, day 5: jQuery
+
+note:
+ALWAYS put library links before you try use the library.
+
+For future assignments link to GitHub.

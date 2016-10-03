@@ -63,3 +63,6 @@ function findIsolatedSeat (seatsArray) {
 }
 
 findIsolatedSeat(seatsOccupied);
+
+// alt function
+// for (var y = i; seatsArray[y] == false; y++)
