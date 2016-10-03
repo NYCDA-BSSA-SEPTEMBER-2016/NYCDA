@@ -1,13 +1,21 @@
+/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {    margin: 0;	padding: 0;	border: 0;	font-size: 100%;	font: inherit;	vertical-align: baseline;}/* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block;}body {	line-height: 1;}ol, ul {	list-style: none;}blockquote, q {	quotes: none;}blockquote:before, blockquote:after,q:before, q:after {	content: '';	content: none;}table {	border-collapse: collapse;	border-spacing: 0;}
+h1 {
+	font-weight: bold;
+	font-size:35px;
+}
+
 body {
 	font-family: arial,sans-serif;
 	color:rgb(50,50,50);
 	margin:0px;
+	line-height: 2em;
 }
 
 nav ul {
 	margin:0px;
-	background: rgb(219, 220, 221);
+	background: rgb(230, 231, 232);
 	text-align: center;
+	margin-bottom:60px;
 }
 
 ul li {
@@ -24,17 +32,21 @@ ul li:after {
 
 ul li:first-child:before {
 	content: '|';
-	padding-right: 40px;
+	padding: 0px 40px;
 }
 
 a {
 	text-decoration: none;
 	color:inherit;
-	padding:2px;
+	padding:0px;
 }
 
 a:hover {
 	color:rgb(50,50,50);
+}
+
+h4 {
+	margin-top:15px;
 }
 
 .content-container {
@@ -43,13 +55,23 @@ a:hover {
 	text-align: center;
 }
 
-h1 {
-	margin-top:60px;
-	margin-bottom:70px;
+.title-container {
+	padding-bottom:70px;
+	clear:both;
 }
 
 img {
 	max-width: 100%;
+}
+
+.about-me-text {
+	border: 2px solid rgb(50,50,50);
+	padding:10px;
+}
+
+.about-me-row {
+	margin-top:40px;
+	clear:both;
 }
 
 .img-home, .gist-home {
@@ -66,6 +88,31 @@ img {
 	margin:0px auto;
 }
 
+.pos-left {
+	float:left;
+	width: 47%;
+}
+
+.pos-right {
+	float:right;
+	max-width: 47%;
+}
+
 footer {
+	clear:both;
 	padding:40px;
+}
+
+.button-row {
+	margin-top:10px;
+}
+
+/*=github plugin*/
+.gt-header {
+	background-color: rgb(230, 231, 232);
+	padding-bottom:30px;
+}
+
+.gt-usr-repo:hover,.gt-usr-folwr:hover,.gt-usr-folng:hover{
+	background-color: inherit;
 }

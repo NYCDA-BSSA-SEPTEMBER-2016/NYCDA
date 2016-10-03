@@ -3,12 +3,12 @@
 // OK <-- remember this.
 
 // Write a function that returns the area of a circle, given the radius. Hints: The area of a circle is "pi r 2". For pi, use Math.PI.
-function CalCircleRadius (radius) {
+function calCircleArea (radius) {
 	return Math.PI * radius * 2;
 }
 
-console.log(CalCircleRadius(2)); // not sure, I can't calculate PI in my head ;) Actually, it's between 12 and 13;
-console.log(CalCircleRadius(5)); // between 30 - 32;
+console.log(calCircleArea(2)); // 12.566
+console.log(calCircleArea(5)); // 31.316;
 
 // Given a string, create a function that returns the last character in that string. example: "cattywampus" --> "s"
 function lastLetter (string) {
@@ -42,33 +42,29 @@ console.log(gijsManier(7)); //*******
 
 // Now, write a function that takes in one parameter "length" and prints out a square of stars. examples:
 function starSquare (length) {
-	var result = '';
 	for (var x = 0; x < length; x++) {
-		var tempResult = '';
-		for (var i = 0; i < length; i++) {
+		for (var i = 0, tempResult = ''; i < length; i++) {
 			tempResult += '*';
 		}
-		result += tempResult + ' '; 
+		console.log(tempResult)
 	}
-	return result;
 }
 
-console.log(starSquare(2)); // ** **
-console.log(starSquare(4)); // **** **** **** ****
+starSquare(2); // ** 
+			   // **
+starSquare(4);
 
 // Given an array of integers, write a function that finds the average and returns it.
 function arrayAverage (intArray) {
-	var sum = 0;
-	var result = 0;
-	for (var i = 0; i < intArray.length; i++) {
+	for (var i = 0, sum = 0; i < intArray.length; i++) {
 		sum += intArray[i];
 	}
-	result = sum / intArray.length;
-	return result;
+	return sum /= intArray.length;
 }
 
 console.log(arrayAverage([1,2,3])); // 2
 console.log(arrayAverage([6,3,0])); // 3
+
 
 // examples: [1,2,3] --> 2 [1,2,4] --> 2.3333
 
