@@ -52,8 +52,14 @@ img {
 	max-width: 100%;
 }
 
-.img-home {
+.img-home, .gist-home {
 	max-width:800px;
+	text-align:center;
+	margin:0px auto;
+}
+
+.img-showcase {
+	max-width: 600px;
 }
 
 .github-embed img {
