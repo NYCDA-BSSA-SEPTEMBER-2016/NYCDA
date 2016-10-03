@@ -160,7 +160,7 @@ function findIsolatedSeat (seatsArray) {
 		}
 	}
 	// counting from 1;
-	console.log ('The best seat of John is seat ' + (parseInt(winnerIndex) + 1) + '. It is ' + winner + ' seats from the closest occupied seat.' )
+	console.log ('The best seat for John is seat ' + (parseInt(winnerIndex) + 1) + '. It is ' + winner + ' seats from the closest occupied seat.' )
 }
 
 findIsolatedSeat(seatsOccupied);
