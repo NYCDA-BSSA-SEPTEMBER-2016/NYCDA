@@ -53,6 +53,7 @@ h4 {
 	max-width:1080px;
 	margin:0px auto;
 	text-align: center;
+	padding:1%;
 }
 
 .title-container {
@@ -115,4 +116,22 @@ footer {
 
 .gt-usr-repo:hover,.gt-usr-folwr:hover,.gt-usr-folng:hover{
 	background-color: inherit;
+}
+
+
+
+@media (max-width: 565px) {
+	.pos-left, .pos-right {
+		width:96%;
+		margin:0px auto;
+		max-width: 100%;
+		float:none;
+	}
+
+	.container-right {
+		width:100%;
+	}
+	ul li:after, ul li:first-child:before {
+		padding: 0px 20px;
+	}
 }
