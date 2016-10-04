@@ -17,19 +17,31 @@
 	</nav>
 
 	<div class="content-container">
-		<h1>
-			
-		</h1>
 
-		<div class="showcase-slider">
-		<!-- left nav arrow -->
-			<!-- img for now, use for Node to embed Github directly later. -->
-			<div class="repo-1"></div>
-		<!-- right nav arrow -->
+		<div class="hide ajax-show showcase-slider">
+			<h2 class="showcase-project-title"></h4>
+			<div class="showcase-box">
+				<a class="showcase-project-link" href="" target="_blank">	
+					<img src="./img/github-icon.png" alt="">	
+					<!-- GitHub icon by Pixan -->
+				</a>
+			</div>
+			<div class="showcase-lastest-push"> </div><a class="github-button" href="https://github.com/mistertjen/NYCDA/fork" data-icon="octicon-repo-forked" aria-label="Fork mistertjen/NYCDA on GitHub">Fork</a>
+			<!-- change this link every time. -->
+			<div class="showcase-project-languages"></div>
+
+					<!-- <ul>
+						<li>Stars</li>
+						<li>Watchers</li>
+						<li>Forks</li>
+					</ul> -->
+		
 		</div>
 
+
+
+
 <!-- THE PLAN:
-// get all my repos from github. JSON data.
 // transform data. Probably into an array of repo titles.
 // put the array into html onto this page.
 // add a default description to the data.
@@ -50,6 +62,8 @@
 	<script src='./includes/underscore-min.js'></script>
 	<script src='./includes/github.js'></script>
 	<script src='./includes/main.js'></script>
+	<!-- <script src="./includes/buttons.js"></script> -->
+	<script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>
 

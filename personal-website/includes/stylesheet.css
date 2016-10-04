@@ -1,20 +1,37 @@
 /** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {    margin: 0;	padding: 0;	border: 0;	font-size: 100%;	font: inherit;	vertical-align: baseline;}/* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block;}body {	line-height: 1;}ol, ul {	list-style: none;}blockquote, q {	quotes: none;}blockquote:before, blockquote:after,q:before, q:after {	content: '';	content: none;}table {	border-collapse: collapse;	border-spacing: 0;}
-h1 {
-	font-weight: bold;
-	font-size:35px;
-}
 
+/*=GENERAL FONTS & COLORS*/
 body {
 	font-family: arial,sans-serif;
 	color:rgb(50,50,50);
-	margin:0px;
 	line-height: 2em;
-	/*background-image: url("./../img/art-photo-new2.jpg");
+	/* =ALT STYLE;
+	background-image: url("./../img/art-photo-new2.jpg");
 	background-color:rgba(255,255,255,0.6);
 	background-size: 140%;
 	background-repeat: no-repeat;*/
 }
 
+h1 {
+	font-weight: bold;
+	font-size:35px;
+}
+
+h4 {
+	margin-top:15px;
+	/*not correct this approach.*/
+}
+
+a {
+	text-decoration: none;
+	color:inherit;
+}
+
+a:hover {
+	color:rgb(50,50,50);
+}
+
+/*=NAV*/
 nav ul {
 	margin:0px;
 	background: rgb(230, 231, 232);
@@ -22,37 +39,49 @@ nav ul {
 	margin-bottom:60px;
 }
 
-ul li {
+nav ul li {
 	display:inline-block;
 	padding:10px 5px;
 	color:#7f8082;
 }
 
-ul li:after {
+nav ul li:after {
 	padding: 0px 40px;
 	content: '|';
 	line-height: 100%;
 }
 
-ul li:first-child:before {
+nav ul li:first-child:before {
 	content: '|';
 	padding: 0px 40px;
 }
 
-a {
-	text-decoration: none;
-	color:inherit;
-	padding:0px;
+/*=FOOTER*/
+footer {
+	clear:both;
+	padding:40px;
 }
 
-a:hover {
-	color:rgb(50,50,50);
+/*TO BE DELETED*/
+img {
+	max-width: 100%;
 }
 
-h4 {
-	margin-top:15px;
+.img-showcase {
+	max-width: 600px;
 }
 
+.github-embed img {
+	margin:0px auto;
+}
+
+.img-home, .gist-home {
+	max-width:800px;
+	text-align:center;
+	margin:0px auto;
+}
+
+/*=GENERAL POSITIONING*/
 .content-container {
 	max-width:1080px;
 	margin:0px auto;
@@ -65,34 +94,6 @@ h4 {
 	clear:both;
 }
 
-img {
-	max-width: 100%;
-}
-
-.about-me-text {
-	border: 2px solid rgb(50,50,50);
-	padding:10px;
-}
-
-.about-me-row {
-	margin-top:40px;
-	clear:both;
-}
-
-.img-home, .gist-home {
-	max-width:800px;
-	text-align:center;
-	margin:0px auto;
-}
-
-.img-showcase {
-	max-width: 600px;
-}
-
-.github-embed img {
-	margin:0px auto;
-}
-
 .pos-left {
 	float:left;
 	width: 47%;
@@ -103,9 +104,17 @@ img {
 	max-width: 47%;
 }
 
-footer {
+
+
+/*CHECK LATER*/
+.about-me-text {
+	border: 2px solid rgb(50,50,50);
+	padding:10px;
+}
+
+.about-me-row {
+	margin-top:40px;
 	clear:both;
-	padding:40px;
 }
 
 .button-row {
@@ -121,13 +130,35 @@ footer {
 	margin:0px auto;
 }
 
-/*=github plugin*/
+.showcase-box:hover {
+	/*show alt data*/
+}
+
+.showcase-box img {
+	height:250px;
+	width:250px;
+	padding:50px;
+	border: 1px solid rgb(50,50,50);
+	margin-top:30px;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.hide {
+	visibility: hidden;
+}
+
+/*=PLUGIN: GITHUB*/
 .gt-header {
 	background-color: rgb(230, 231, 232);
 	/*background-color: rgb(180,180,180);*/
 	padding-bottom:30px;
 }
 
+/*TO BE DELETED*/
 .gt-usr-repo:hover,.gt-usr-folwr:hover,.gt-usr-folng:hover{
 	background-color: inherit;
 }
@@ -136,7 +167,7 @@ footer {
 	height:inherit;
 }
 
-
+/*=MEDIAQURIES*/
 @media (max-width: 565px) {
 	.pos-left, .pos-right {
 		width:96%;
