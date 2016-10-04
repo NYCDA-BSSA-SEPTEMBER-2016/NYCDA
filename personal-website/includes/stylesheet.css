@@ -46,7 +46,7 @@ nav ul {
 
 nav ul li {
 	display:inline-block;
-	padding:10px 5px;
+	padding:10px 0px;
 	color:#7f8082;
 }
 
@@ -109,9 +109,21 @@ img {
 	max-width: 47%;
 }
 
+/*=SHOWCASE-PAGE*/
+.showcase-slider {
+	max-width: 60%;
+	margin:0px auto;
+}
 
+.showcase-box img {
+	height:250px;
+	width:250px;
+	padding:50px;
+	border: 1px solid rgb(50,50,50);
+	margin-top:30px;
+}
 
-/*CHECK LATER*/
+/*=CONTACT-PAGE*/
 .about-me-text {
 	border: 2px solid rgb(50,50,50);
 	padding:10px;
@@ -130,19 +142,6 @@ img {
 	margin:0px 10px;
 }
 
-.showcase-slider {
-	max-width: 60%;
-	margin:0px auto;
-}
-
-.showcase-box img {
-	height:250px;
-	width:250px;
-	padding:50px;
-	border: 1px solid rgb(50,50,50);
-	margin-top:30px;
-}
-
 /*=JAVASCRIPT RELATED*/
 .hide {
 	display: none;
@@ -153,15 +152,6 @@ img {
 	background-color: rgb(230, 231, 232);
 	/*background-color: rgb(180,180,180);*/
 	padding-bottom:30px;
-}
-
-/*TO BE DELETED*/
-.gt-usr-repo:hover,.gt-usr-folwr:hover,.gt-usr-folng:hover{
-	background-color: inherit;
-}
-
-.gt-usr-folng {
-	height:inherit;
 }
 
 /*=MEDIAQURIES*/
@@ -176,7 +166,16 @@ img {
 	.container-right {
 		width:100%;
 	}
-	ul li:after, ul li:first-child:before {
+	nav ul li:after, nav ul li:first-child:before {
 		padding: 0px 20px;
 	}
+}
+
+@media (max-width: 405px) {
+	nav ul li:after, nav ul li:first-child:before {
+		padding: 0px 5px;
+	}
+	.showcase-box img {
+	height: inherit;
+	max-width:60%;
 }
