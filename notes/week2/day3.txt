@@ -1,0 +1,18 @@
+week 2, day 3
+
+Git teamwork
+1. create repo
+2. Add team members as collaborators under settings
+3. When adding code, make a branch <shell git branch branchname>
+4. switch to the branch with <shell git checkout branchname>
+5. Do your work (add, commit, push to your branch)
+6. When ready to push, switch to master & pull
+7. Switch back to your branch and <shell git rebase master>
+8. Then in your branch <shell git push>
+9. On github make pull request.
+10. Let a team member merge
+
+With new terminal:
+https://gist.github.com/kevin-smets/8568070
+Changes in bash profile doesn't work anymore
+zsh/rca

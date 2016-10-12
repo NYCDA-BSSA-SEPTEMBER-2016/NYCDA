@@ -23,6 +23,9 @@ dot notation for objects does not work in for-loops. Why? //dot notation is easi
 
 // Arrays apparently have forEach() built in. Come back to it later.
 
+Get back to all the methods of Array.
+Try JSON.
+
 How do virusses spread?
 
 How to create functions that run with large and unknown data?
