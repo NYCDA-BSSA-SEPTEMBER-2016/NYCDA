@@ -10,29 +10,18 @@
 // Country: <country name>
 // Top Level Domain: <tld>
 
-// =MASTER
-var fs = require('fs')
 
-function parseJSON (filename, callback) {
+// =MASTER
+
+const fs = require('fs')
+
+let parseJSON = (filename, callback) => {
 	fs.readFile(filename, 'utf8', function (err,data){
 		if(err) throw err
-			var result = JSON.parse(data)
+			let result = JSON.parse(data)
 		callback(result)
 	})
 }
+// Future: try promises
 
 module.exports = parseJSON
-
-// =TEST
-
-// var fs = require('fs')
-
-// function parseJSON (filename, callback) {
-// 	fs.readFile(filename, 'utf8', function (err,data){
-// 		if(err) throw err
-// 			var result = JSON.parse(data)
-// 		callback(result)
-// 	})
-// }
-
-// module.exports = parseJSON

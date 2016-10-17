@@ -1,0 +1,57 @@
+Cat 1: productivity
+7 zip? --> extract & compress anything. Zips, iso, etc.
+Ninite. Website to get all the software you want.
+Phase express. Text expanders
+=== Atext. Text expanders. e.g. $email
+Caffeine. Mac remains on, e.g. presentations. 
+Activity timer.
+=== Divvy. --> screen management like in windows. Free on is SizeUp. // scaling to more space.
+Franz. One screen for all your messaging stuff.
+Unified remote. Turns your smartphone into a remote. 
+Ditto. Clipboard History
+=== Copy'em Paste. Clipboard History. Paid.
+
+Cat 2: chrome extensions
+X= Video speed controller. OMG I NEED THIS.
+Addblock (super)
+Wappalyzer
+
+Cat 3: Finance
+LATER === You need a budget. Budget manager. Allocating the money I make.
+
+Cat 4: Sublime
+X= MarkdownEditing
+X= Color highlighter
+X= Markdown Preview
+Sass/Pug/Babel
+
+Cat 5: Development
+Get github free education stuff.
+Cyberduck over FileZilla, more options. 
+Winscp
+=== Generous VPN
+openVPN for win
+VirtualBox.
+
+Cat 6: Design & frameworks
+All Adobe Products
+Affinity for Mac
+CSS Frameworks: Bootstrap, Materialize, Themeforrest
+=== Afinity of photoshop download.
+
+Cat 7: Professional Growth
+LinkedIn - who are connected to ....; Make it your high quality network?
+TED - The newest stuff. See into the future.
+Codecadamy, Code School, Team Treehouse
+
+Cat 8: Others
+MAYBE === Sunrise Calendar.
+Inbox.google.com --> Email together with tasks. Done, for later.
+Evernote?
+=== LastPass. Autologin for everything.
+PROB === Disk Inventory X
+Windirstat 
+PROB === TeamViewer. Remote controll a computer.
+
+
+Invest in indexfunds.

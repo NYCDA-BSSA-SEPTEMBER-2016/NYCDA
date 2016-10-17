@@ -1,0 +1,11 @@
+1. The most powerful tools to tackles problems and blow your mind: recursion, reduce() and more
+2. How computers 'think'; 
+3. How to find a cool open-source Node project, understand it and contribute to it; 
+4. Life lessons by Mentor; 
+5. How to evaluate if a programming project is do-able for your skill level and how long it will take.
+6. Introduction to software architecture
+7. History and future of technological developments: birth and death of paradigms.
+8. Introduction to important computer science principles
+9. What happens if aliens attack earth?
+10. Design choices in the JavaScript language as compared to other languages: the event loop, prototypes, non-blocking IO and more
+11. ES 2016+: The future of JavaScript.

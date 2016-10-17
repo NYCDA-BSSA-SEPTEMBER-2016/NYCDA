@@ -75,7 +75,8 @@ object.key = 'value'
 
  - 6f. Explain the difference between these two ways, and when it is appropriate to use each way.
 Dot notation is preferred whenever possible for increased readability. However, dot notation does not always work. Examples:
-object.number does not work, object[0] is the only way to access properity 0. 
+object.number does not work, object[0] is the only way to access properity 0. Dot notation also doesn't work if you are trying to refence a variable 
+rather than a string. E.g. var apples = 'bananas', groceries = {}; groceries.apples = 4 // groceries.apples = 4; groceries[apples] = 4 // groceries.bananas = 4.
 
  - 6g. Describe how to iterate though an object using a loop.
  for (keys in object)
@@ -97,6 +98,23 @@ An algorithm is a procedure to compute output from input.
 	// 'durian' returns '-1'
 ```
 
+// psuedo-code
+var array = [value1, value2]
+function (array, value) {
+	// find index of array where a value is.
+	if (array[i] === value) return array[i]
+	if nothing is found return -1  
+}
+
+let array = ['apple', 'orange', 'pineapple']
+let findIndex = (array, value) => {
+	for (let i = 0; i < array.length; i++) {	
+		if (array[i] == value) return array[i]
+	}
+	return -1
+}
+console.log(findIndex(array,'orange'))
+
 9. Again, for the following problem, first write down how exactly to solve the problem in English. Once you are able to describe it in English, translate it into code.
 
 ```js
@@ -104,3 +122,36 @@ An algorithm is a procedure to compute output from input.
 // example: ['apple', 'orange', 'orange', 'pineapple']
 	// 'orange' returns [1,2]
 ```
+
+//pseudo-code
+function findIndex (array, value) {
+	let result = []
+	if (array[i] == value)
+		result.push(array[i])
+	if nothing return -1 --> if (result === []) return -1 else return result
+}
+
+let array = ['apple', 'orange', 'pineapple','orange', 'orange']
+let findIndex = (array, value) => {
+	let result = []
+	for(let i = 0; i < array.length; i++) {
+		if (array[i] == value) {
+			result.push(array[i])
+		}
+	}
+	if (result === []) return -1 
+	else {
+		return result
+	}
+}
+console.log(findIndex(array,'orange'))
+
+// alternative
+let array = ['apple', 'orange', 'pineapple','orange', 'orange']
+
+function findIndex (array, value) {
+	return array.filter(function (x) {
+		return x === value
+	})
+}
+console.log(findIndex(array,'orange'))
